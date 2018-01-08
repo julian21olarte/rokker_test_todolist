@@ -36,7 +36,7 @@ function getTasks(req, res) {
 
 
 function deleteTask(req, res) {
-    let taskId = req.body.id;
+    let taskId = req.params.id;
     if(!taskId) {
         res.status(400).send({status: 400, validationErrors: "No id provided."});
     }
